@@ -12,10 +12,8 @@ import org.example.lk.ijse.BO.BOFactory;
 import org.example.lk.ijse.BO.custom.CustomerBO;
 import org.example.lk.ijse.Entity.Customer;
 import org.example.lk.ijse.DTO.Tm.CusromerTM;
-
 import java.net.URL;
 import java.sql.SQLException;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 

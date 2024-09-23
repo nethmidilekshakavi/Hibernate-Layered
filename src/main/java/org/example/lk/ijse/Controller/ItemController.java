@@ -5,13 +5,13 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.text.Text;
 import org.example.lk.ijse.BO.BOFactory;
+import org.example.lk.ijse.BO.custom.ItemBo;
+import org.example.lk.ijse.Entity.Item;
 
-
-import java.sql.SQLException;
 
 public class ItemController {
 
- /*   ItemBo itemBo = (ItemBo) BOFactory.getBoFactory().getBO(BOFactory.BOTypes.ITEM);*/
+    ItemBo itemBo = (ItemBo) BOFactory.getBoFactory().getBO(BOFactory.BOTypes.ITEM);
 
     @FXML
     private TableColumn<?, ?> COLPRICE;
@@ -54,7 +54,7 @@ public class ItemController {
 
     @FXML
     void deleteOnAction(ActionEvent event) {
-       /* int id = Integer.parseInt(codetxt.getText());
+        /*int id = Integer.parseInt(codetxt.getText());
 
         boolean c = false;
 
@@ -78,7 +78,7 @@ public class ItemController {
 
     @FXML
     void saveOnAction(ActionEvent event) {
-      /*  int code = Integer.parseInt(codetxt.getText());
+        int code = Integer.parseInt(codetxt.getText());
         String name = nametxt.getText();
         int qty = Integer.parseInt(qtytxt.getText());
         String price = pricetxt.getText();
@@ -86,13 +86,7 @@ public class ItemController {
         Item item = new Item(code,name,qty,price);
         boolean i = false;
 
-        try {
-            i = itemBo.saveItem(item);
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        } catch (ClassNotFoundException e) {
-            throw new RuntimeException(e);
-        }
+        i = itemBo.saveItem(item);
 
 
         if (i){
@@ -101,7 +95,7 @@ public class ItemController {
         else {
             new Alert(Alert.AlertType.CONFIRMATION,"Item Save Success").show();
 
-        }*/
+        }
     }
 
     @FXML

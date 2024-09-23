@@ -5,14 +5,13 @@ import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.example.lk.ijse.Controller.ItemController;
+import org.example.lk.ijse.Entity.Item;
 
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-@Entity
-public class ItemDTO {
-
-    @Id
+public class ItemDTO extends ItemController {
     private int code;
     private String name;
     private int qty;

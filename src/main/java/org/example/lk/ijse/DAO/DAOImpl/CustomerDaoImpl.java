@@ -1,6 +1,7 @@
 package org.example.lk.ijse.DAO.DAOImpl;
 
 import org.example.lk.ijse.DAO.custom.CustomerDao;
+import org.example.lk.ijse.DTO.ItemDTO;
 import org.example.lk.ijse.Entity.Customer;
 import org.example.lk.ijse.config.FactoryConfiguration;
 import org.hibernate.Session;
@@ -14,7 +15,7 @@ public class CustomerDaoImpl implements CustomerDao {
 
 
     @Override
-    public boolean save(Customer entity) throws SQLException, ClassNotFoundException {
+    public boolean save(ItemDTO entity)  {
 
         Session sessions = FactoryConfiguration.getInstance().getSession();
         Transaction transaction = sessions.beginTransaction();
@@ -76,4 +77,8 @@ public class CustomerDaoImpl implements CustomerDao {
         return list;
     }
 
+    @Override
+    public boolean save(Customer entity) {
+        return false;
+    }
 }

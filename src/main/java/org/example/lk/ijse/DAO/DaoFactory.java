@@ -1,5 +1,6 @@
 package org.example.lk.ijse.DAO;
 import org.example.lk.ijse.DAO.DAOImpl.CustomerDaoImpl;
+import org.example.lk.ijse.DAO.DAOImpl.ItemDaoImpl;
 
 public class DaoFactory {
     private static DaoFactory daoFactory;
@@ -12,7 +13,7 @@ public class DaoFactory {
     }
 
     public enum DAOTypes {
-        CUSTOMER,ITEM,ORDER,ORDER_DETAILS,QUERY_DAO,MEAL,EMPLOYEE,INGREDIENTS,SUPPLIER
+        CUSTOMER,ITEM,ORDER,ORDER_DETAILS
     }
 
     public SuperDao getDAO(DAOTypes types){
@@ -20,7 +21,7 @@ public class DaoFactory {
             case CUSTOMER:
                 return new CustomerDaoImpl();
             case ITEM:
-               /* return new ItemDaoImpl();*/
+                return new ItemDaoImpl();
 
         }
         return null;

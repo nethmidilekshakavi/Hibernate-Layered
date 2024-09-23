@@ -1,4 +1,5 @@
 package org.example.lk.ijse.BO;
+import org.example.lk.ijse.BO.BoImpl.ItemBOImpl;
 import org.example.lk.ijse.BO.BoImpl.customerBoImp;
 
 public class BOFactory {
@@ -19,7 +20,7 @@ public class BOFactory {
             case CUSTOMER:
                 return new customerBoImp();
             case ITEM:
-                /*return new ItemBoImpl();*/
+                return new ItemBOImpl();
         }
         return null;
     }
