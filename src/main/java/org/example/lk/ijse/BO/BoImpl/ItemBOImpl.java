@@ -6,6 +6,7 @@ import org.example.lk.ijse.DAO.custom.ItemDao;
 import org.example.lk.ijse.Entity.Item;
 
 import java.sql.SQLException;
+import java.util.List;
 
 public class ItemBOImpl implements ItemBo {
 
@@ -24,6 +25,13 @@ public class ItemBOImpl implements ItemBo {
     @Override
     public boolean deleteItem(int id) throws SQLException, ClassNotFoundException {
         return itemDao.delete(id);
+    }
+
+    @Override
+    public List<Item> getAllItem() throws SQLException {
+
+        List<Item>list = itemDao.getAll();
+        return list;
     }
 
 }

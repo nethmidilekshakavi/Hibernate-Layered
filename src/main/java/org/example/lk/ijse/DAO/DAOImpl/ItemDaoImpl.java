@@ -7,6 +7,9 @@ import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.query.NativeQuery;
 
+import java.sql.SQLException;
+import java.util.List;
+
 public class ItemDaoImpl implements ItemDao {
 
     @Override
@@ -55,4 +58,19 @@ public class ItemDaoImpl implements ItemDao {
         return false;
     }
 
+    @Override
+    public List<Item> getAll() throws SQLException {
+
+        Session session = FactoryConfiguration.getInstance().getSession();
+        Transaction transaction = session.beginTransaction();
+
+        List<Item>list = session.createQuery("from Item ",Item.class).list();
+
+
+        transaction.commit();
+        session.close();
+
+
+        return list;
+    }
 }

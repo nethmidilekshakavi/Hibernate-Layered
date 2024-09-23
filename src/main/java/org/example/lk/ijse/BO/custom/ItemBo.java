@@ -6,6 +6,7 @@ import org.example.lk.ijse.DTO.ItemDTO;
 import org.example.lk.ijse.Entity.Item;
 
 import java.sql.SQLException;
+import java.util.List;
 
 public interface ItemBo extends SuperBo {
 
@@ -14,4 +15,6 @@ public interface ItemBo extends SuperBo {
     boolean UpdateItem(Item entity);
 
     boolean deleteItem(int id) throws SQLException, ClassNotFoundException;
+
+    List<Item> getAllItem() throws SQLException;
 }
