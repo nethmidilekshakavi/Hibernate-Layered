@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: brown;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.lk.ijse.Controller.DashBoard">
+   <children>
+      <Button fx:id="btncustomer" layoutX="183.0" layoutY="74.0" mnemonicParsing="false" onAction="#customerOnAction" prefHeight="33.0" prefWidth="235.0" style="-fx-background-color: orange;" text="CUSTOMER" textFill="#f2eaea">
+         <effect>
+            <DropShadow />
+         </effect>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnitrm" layoutX="183.0" layoutY="167.0" mnemonicParsing="false" onAction="#itrmOnAction" prefHeight="33.0" prefWidth="235.0" style="-fx-background-color: red;" text="ITEM" textFill="#f5f0f0">
+         <effect>
+            <DropShadow />
+         </effect>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnorder" layoutX="183.0" layoutY="260.0" mnemonicParsing="false" onAction="#orderOnAction" prefHeight="33.0" prefWidth="235.0" style="-fx-background-color: pink;" text="ORDER" textFill="#f5f5f5">
+         <effect>
+            <DropShadow />
+         </effect>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Text fx:id="dashboardtxt" fill="#fcf9f9" layoutX="29.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DASHBOARD">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

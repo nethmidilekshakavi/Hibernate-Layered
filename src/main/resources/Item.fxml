@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.lk.ijse.Controller.ItemController">
+   <children>
+      <TextField fx:id="codetxt" layoutX="86.0" layoutY="76.0" prefHeight="25.0" prefWidth="196.0" promptText="CODE" />
+      <TextField fx:id="nametxt" layoutX="331.0" layoutY="76.0" prefHeight="25.0" prefWidth="196.0" promptText="Name" />
+      <TextField fx:id="qtytxt" layoutX="86.0" layoutY="119.0" prefHeight="25.0" prefWidth="196.0" promptText="QTY" />
+      <TextField fx:id="pricetxt" layoutX="331.0" layoutY="119.0" prefHeight="25.0" prefWidth="196.0" promptText="PRICE" />
+      <Button fx:id="savebtn" layoutX="85.0" layoutY="164.0" mnemonicParsing="false" onAction="#saveOnAction" prefHeight="25.0" prefWidth="73.0" text="SAVE" />
+      <Button fx:id="updatebtn" layoutX="267.0" layoutY="164.0" mnemonicParsing="false" onAction="#updateOnAction" prefHeight="25.0" prefWidth="73.0" text="UPDATE" />
+      <Button fx:id="deletebtn" layoutX="444.0" layoutY="164.0" mnemonicParsing="false" onAction="#deleteOnAction" prefHeight="25.0" prefWidth="90.0" text="DELETE" />
+      <TableView fx:id="itemTable" layoutX="79.0" layoutY="210.0" prefHeight="183.0" prefWidth="463.0">
+         <columns>
+            <TableColumn fx:id="colcode" prefWidth="75.0" text="CODE" />
+            <TableColumn fx:id="colname" prefWidth="111.0" text="NAME" />
+            <TableColumn fx:id="colqty" prefWidth="135.0" text="QTY" />
+            <TableColumn fx:id="COLPRICE" prefWidth="141.0" text="PRICE" />
+         </columns>
+      </TableView>
+      <Text fx:id="title" layoutX="259.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Item Form">
+         <effect>
+            <Reflection fraction="0.0" />
+         </effect>
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>
