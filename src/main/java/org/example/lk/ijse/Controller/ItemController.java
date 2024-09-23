@@ -8,6 +8,8 @@ import org.example.lk.ijse.BO.BOFactory;
 import org.example.lk.ijse.BO.custom.ItemBo;
 import org.example.lk.ijse.Entity.Item;
 
+import java.sql.SQLException;
+
 
 public class ItemController {
 
@@ -54,14 +56,14 @@ public class ItemController {
 
     @FXML
     void deleteOnAction(ActionEvent event) {
-        /*int id = Integer.parseInt(codetxt.getText());
+        int code = Integer.parseInt(codetxt.getText());
 
         boolean c = false;
 
         try {
-            c = itemBo.deleteCustomer(id);
+            c = itemBo.deleteItem(code);
         } catch (SQLException e) {
-            throw new RuntimeException(e);
+            throw new RuntimeException(String.valueOf(c));
         } catch (ClassNotFoundException e) {
             throw new RuntimeException(e);
         }
@@ -73,7 +75,7 @@ public class ItemController {
         else {
             new Alert(Alert.AlertType.CONFIRMATION,"Item delete Success").show();
 
-        }*/
+        }
     }
 
     @FXML
@@ -100,7 +102,24 @@ public class ItemController {
 
     @FXML
     void updateOnAction(ActionEvent event) {
+        int code = Integer.parseInt(codetxt.getText());
+        String name = nametxt.getText();
+        int qty = Integer.parseInt(qtytxt.getText());
+        String price = pricetxt.getText();
 
+        Item item = new Item(code,name,qty,price);
+        boolean i = false;
+
+        i = itemBo.UpdateItem(item);
+
+
+        if (i){
+            new Alert(Alert.AlertType.ERROR,"Item not Update");
+        }
+        else {
+            new Alert(Alert.AlertType.CONFIRMATION,"Item Update Success").show();
+
+        }
     }
 
 }

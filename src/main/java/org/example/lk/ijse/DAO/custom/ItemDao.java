@@ -5,4 +5,7 @@ import org.example.lk.ijse.Entity.Item;
 
 public interface ItemDao extends CrudDao<Item> {
 
+    boolean update(Item entity);
+
+    boolean delete(int code);
 }
