@@ -45,8 +45,12 @@ public class DashBoard {
     }
 
     @FXML
-    void orderOnAction(ActionEvent event) {
-
+    void orderOnAction(ActionEvent event) throws IOException {
+        Stage stage = new Stage();
+        stage.setScene(new Scene(FXMLLoader.load(this.getClass().getResource("/Order.fxml"))));
+        stage.show();
+        stage.centerOnScreen();
+        stage.setTitle("Item Form");
     }
 
 }
